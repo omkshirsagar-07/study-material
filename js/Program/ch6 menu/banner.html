@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            box-sizing: border-box;
+            width: 50vw;
+            height: 80vh;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body onload="displayimg()">
+    <img src="hp.jpg" name="img">
+    <button onclick="displaying1(-1)">previous</button>
+    <button onclick="displaying1(1)">next</button>
+
+    <script>
+        var bannerarr = ["banner1.jpg", "hp.jpg", "banner3.jpg"];
+        var bannercount = 0;
+
+        function displayimg() {
+            if (document.images) {
+                bannercount++;
+                if(bannercount==bannerarr.length){
+                    bannercount=0;
+                }
+                document.img.src=bannerarr[bannercount];
+                // setTimeout("displayimg()",5000);
+            } 
+        }
+function displaying1(index)
+{
+bannercount+=index;
+console.log(bannercount)
+document.img.src=bannerarr[bannercount];
+
+}
+
+    </script>
+</body>
+
+</html>

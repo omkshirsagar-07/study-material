@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+  <meta charset=”UTF-8″>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+  <title>Dropdown Menu Example</title>
+  <style>
+    
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+ 
+    .menu > li {
+      display: inline-block;
+      position: relative;
+    }
+ 
+    .menu a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+ 
+    .menu a:hover {
+      background-color: #575757;
+    }
+ 
+    /* Dropdown content */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      padding: 0;
+    }
+ 
+    .submenu li {
+      display: block;
+    }
+ 
+    .submenu a {
+      padding: 10px;
+     
+    }
+ 
+    .menu li:hover .submenu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+ 
+  <ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li>
+      <a href="#services">Services</a>
+      <ul class="submenu">
+        <li><a href="#webdesign">Web Design</a></li>
+        <li><a href="#seo">SEO</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+ 
+</body>
+</html>

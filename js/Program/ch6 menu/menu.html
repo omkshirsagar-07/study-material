@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Banner Example</title>
+    <style>
+        /* Basic slider styling */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border: 2px solid #fff;
+        }
+        /* Navigation buttons (prev/next) */
+        .prev,.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(230, 102, 102, 0.5);
+            color: white;
+            border: none;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #a5a5a5e9;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slides">
+            <img src="banner1.jpg" alt="Slide 1">
+            <img src="banner2.jpg" alt="Slide 2">
+            <img src="banner3.jpg" alt="Slide 3">
+            <img src="banner2.jpg" alt="Slide 4">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+        <!-- <div class=”dots”>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div> -->
+        <script>
+            let currentIndex = 0; // Track the current slide index
+            const slides = document.querySelector(".slides");
+            const dots = document.querySelectorAll(".dot");
+            // Function to show the current slide
+            function showSlide(index) {
+                const totalSlides = slides.children.length;
+                currentIndex = (index + totalSlides) % totalSlides; // Wrap around
+                const offset = -currentIndex * 100; // Calculate the offset to shift the slides
+                slides.style.transform = "translateX(${offset}%)";
+                // Set the active dot
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("active", i === currentIndex);
+                });
+            }
+            // Function to move the slide (next/prev)
+            function moveSlide(step) {
+                showSlide(currentIndex + step);
+            }
+            // Function to go to a specific slide
+            function currentSlide(index) {
+                showSlide(index - 1);
+            }
+            // Auto-slide functionality
+            setInterval(() => {
+                moveSlide(1); // Move to the next slide every 3 seconds
+            }, 3000);
+            // Initialize the slider
+            showSlide(0);
+        </script>
+</body>
+</html>

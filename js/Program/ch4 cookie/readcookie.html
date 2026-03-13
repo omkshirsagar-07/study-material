@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Example</title>
+</head>
+<body>
+    <script>
+              
+        // Setting cookies
+        document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2014 23:59:59 UTC; path=/";
+        document.cookie = "email=john.doe@example.com; expires=Fri, 31 Dec 2014 23:59:59 UTC; path=/";
+        document.cookie = "theme=dark; expires=Fri, 31 Dec 2014 23:59:59 UTC; path=/";
+   
+
+        function ReadCookie() {
+            // Display all cookies
+            alert("All Cookies: " + document.cookie);
+
+            var allcookies = document.cookie;
+            console.log("All Cookies: " + allcookies);
+
+            // Split cookies into individual key-value pairs
+            var cookiearray = allcookies.split(';');
+
+            // Parse each cookie
+            for (var i = 0; i < cookiearray.length; i++) {
+                var pair = cookiearray[i].trim().split("="); // Trim and split
+                var name = pair[0];
+                var value = pair[1];
+                console.log("Key: " + name + ", Value: " + value);
+                alert("Key: " + name + " and Value: " + value);
+            }
+        }
+        // Call the function to display cookies
+        ReadCookie();
+    </script>
+</body>
+</html>

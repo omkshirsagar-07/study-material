@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>FRAME 3</h1>
+        <input type="text" id="txt1">
+        <input type="button" value="F1" onclick="cf1();">
+        <br><br>
+        <input type="text" id="txt2">
+        <input type="button" value="F2" onclick="cf2();">
+        <script>
+            function cf1() {
+                var f11 = parent.frames[0].document.getElementById("f1p1");
+                var t1 = document.getElementById("txt1").value;
+                // parent.frames[1].document.getElementById("f2p1").innerHTML= t1;
+                f11.innerHTML = t1;
+            }
+            function cf2() {
+                var t2 = document.getElementById("txt2").value;
+                var f2p = parent.frames[1].document.getElementById("f2p1");
+                var f22 = parent.frame2.document.getElementById("f2p1");
+                f22.innerHTML = t2;
+                // f2p.innerHTML = t2;
+            }
+
+
+
+
+        </script>
+
+
+    </center>
+
+</body>
+
+</html>

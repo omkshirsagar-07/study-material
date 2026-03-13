@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+     
+
+        let std = {
+            s_name: "Kunal",
+            s_id: 55,
+            s_roll_no: 1,
+            s_address: {
+                city: "my city",
+                gali_no: 123
+            }
+        }
+
+        for ( let t in std) {
+            console.log(t) //get the index value in array
+
+        }
+        for (let x of std) {
+            console.log(x) //get the actual value in array
+
+        }
+
+
+
+
+        console.log(std)
+        console.log(std.s_roll_no)
+        console.log(std.s_address.gali_no)
+
+        delete std.s_id
+        console.log(Object.keys(std))
+        console.log(Object.values(std))
+        console.log(Object.entries(std))
+
+
+
+
+
+    </script>
+</body>
+
+</html>

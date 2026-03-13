@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = ["value", 1, 2, true, "end"]
+        document.write("array = ",arr1)
+
+        arr1.push(9)
+        document.write("<br>o/p of push()  method :", arr1)
+
+        arr1.pop()
+        document.write("<br>o/p of pop()  method :", arr1)
+
+        arr1.shift()
+        document.write("<br>o/p of shift()  method :", arr1)
+
+        arr1.unshift("value")
+        document.write("<br>o/p of unshift()  method :", arr1)
+
+        arr1.splice(2, 2)
+        document.write("<br>o/p of splice()  method :", arr1)
+                
+        arr1.splice(2,0,2,true)
+        document.write("<br>o/p of splice()  method :", arr1)
+
+       
+        document.write("<br>o/p of  slice() method :",  arr1.slice(1,3))
+
+        let arr2=[1,2,3,45,8,6]
+        
+        document.write("<br>o/p of join()  method :", arr2.join("."))
+
+        document.write("<br>o/p of reverce()  method :", arr2.reverse())
+
+        let arr3=[]
+        
+        document.write("<br>o/p of  concat() method :", arr3.concat(arr1,arr2))
+
+        document.write("<br>o/p of  indexof() method :", arr1.indexOf("end"))
+
+        document.write("<br>o/p of  includes() method :", arr1.includes(true))
+
+        document.write("<br>o/p of  isArray() method :", arr2.isArray(2))
+    </script>
+</body>
+
+</html>

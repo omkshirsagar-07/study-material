@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>HTML Form</title>
+
+</head>
+
+<body>
+    <form name="myform" action="" method="post">
+        <select name="optionList" >
+                <option value=1>Mango
+                <option value=2>Banana
+                <option value=3>Apple
+            </select>
+            <br><br>
+            <input type="radio" name="grp1" value=1  onclick="updateList(this.value)">Fruits
+            <input type="radio" name="grp1" value=2 onclick="updateList(this.value)">Vegetables
+            <br>
+
+        
+    </form>
+    <script language="javascript" type="text/javascript">
+        function updateList(ElementValue) {
+            with (document.forms.myform) {
+                if (ElementValue == 1) {
+                    optionList[0].text = "Mango";
+
+                    optionList[1].text = "Banana";
+
+                    optionList[2].text = "Apple";
+
+                }
+                if (ElementValue == 2) {
+                    optionList[0].text = "Potato";
+
+                    optionList[1].text = "Cabbage";
+
+                    optionList[2].text = "Onion";
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<input type="text" id="t1" placeholder="First name"><br><br>
+<input type="text" id="t3" placeholder="domain name"><br><br>
+<input type="button" value="Submit" onclick="click1();" ><br><br>
+<p id="p1" ></p>
+
+<script type="text/javascript">
+function click1()
+{
+var fn=document.getElementById("t1").value;
+var ln=document.getElementById("t3").value;
+
+
+document.getElementById("p1").innerHTML=fn+"@"+ln;
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="create Window" onclick="newwin()">
+    <input type="button" value="close Window" onclick="closewin()">
+    
+
+    <script>
+         var newwin;
+function newwin()
+{
+    for(var i=0;i<5;i++)
+{
+     newwin = window.open("","","width=100,height=100");
+newwin.document.write("i am kunal");
+}
+}
+function closewin()
+{
+    newwin.close( );
+}
+
+    </script>
+</body>
+</html>

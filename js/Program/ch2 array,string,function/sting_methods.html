@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+
+</head>
+<body>
+    
+     
+
+
+
+
+
+<script>
+
+let str1="This is the sample string to perform the operation ";
+// length of the String
+document.write("Length of the string is = ",str1.length);
+
+
+// <!-- ! 1st indexOf-->
+document.write("<br>This is the o/p of index of method =",str1.indexOf("a"))
+document.write("<br>This is the o/p of index of method =",str1.indexOf("8"))
+  document.write("<br>This is the o/p of lastIndex of method =",str1.lastIndexOf("a"))
+
+
+// <!-- ! 2nd replace-->
+document.write("<br>This is the o/p of replace method =",str1.replace("a","ATR"))
+document.write("<br>This is the o/p of replaceAll of method =",str1.replaceAll("a","ATR"))
+
+// <!-- ! 3rd slice-->
+document.write("<br>This is the o/p of slice method 5,15 =",str1.slice(5,15))
+document.write("<br>This is the o/p of slice method 5,  =",str1.slice(5,))
+
+
+
+// <!-- ! 4th trim-->
+
+console.log("        <br>This is the o/p of trimStart method 5,  =              ".trimStart())
+console.log("        <br>This is the o/p of trimEnd method 5,  =              ".trimEnd())
+console.log("        <br>This is the o/p of trim method 5,  =              ".trim())
+
+// <!-- ! 4th includes-->
+
+document.write("<br>This is the o/p of includes method =",str1.includes("a"))
+document.write("<br>This is the o/p of includes method =",str1.includes("123"))
+
+// <!-- ! 5th toUppercase-->
+document.write("<br>This is the o/p of toUppercase method =",str1.toUpperCase())
+
+// <!-- ! 6th toLowercase-->
+document.write("<br>This is the o/p of tolowercase method =",str1.toLowerCase())
+
+// <!-- ! 7th Substring-->
+document.write("<br>This is the o/p of substring method =",str1.substring(5,15))
+
+// <!-- ! 8th split-->
+document.write("<br>This is the o/p of split method =",str1.split(""))
+// <!-- ! 9th concat-->
+let str2="Hello Hey";
+
+document.write("<br>This is the o/p of string concat method using (+) operator  =",str1+str2)
+document.write("<br>This is the o/p of string concat method using concat()  =",str1.concat(str2),)
+
+// <!-- ! 10th charAt-->
+document.write("<br>This is the o/p of charAt method =",str1.charAt(8))
+document.write("<br>This is the o/p of charCodeAt method =",str1.charCodeAt(8))
+
+
+
+
+
+
+</script>
+</body>
+</html>

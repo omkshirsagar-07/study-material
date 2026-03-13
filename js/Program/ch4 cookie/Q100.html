@@ -1,0 +1,22 @@
+<html> 
+<head> 
+</head> 
+<body> 
+<script type="text/javaScript"> 
+function setColorBackground() {
+    let userColor = prompt("Please enter a color (e.g., 'red', '#ff0000', 'rgb(255, 0, 0)'):");
+    
+    let newWindow = window.open("", "_blank");
+    
+    if (newWindow) {
+        newWindow.document.body.style.backgroundColor = userColor;
+    } else {
+        alert("Failed to open new window. Please allow pop-ups and try again.");
+    }
+}
+
+setColorBackground();
+
+</script> 
+</body> 
+</html>

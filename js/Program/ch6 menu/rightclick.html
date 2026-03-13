@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Right Click Disable</h1>
+
+
+    <script>
+        function Disable() {
+            alert("Right click is Disable ");
+            return false;
+        }
+
+        function notclick() {
+            if (event.button == 2) {
+                Disable();
+                return false;
+            }
+        }
+        document.oncontextmenu = new Function("Disable();return false;");
+    </script>
+</body>
+
+</html>

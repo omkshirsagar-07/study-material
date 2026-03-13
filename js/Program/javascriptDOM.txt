@@ -1,0 +1,1 @@
+The Document Object Model (DOM) is a programming interface (API) for HTML and XML documents. It represents the web page as a hierarchical tree of objects, allowing JavaScript to dynamically access, change, and manipulate the structure, content, and style of the document.

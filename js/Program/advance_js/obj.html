@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- todo:jwjwgr -->
+    <script>
+
+
+       let std = {
+            s_name: "Kunal",
+            s_id: 55,
+            s_roll_no: 1,
+            s_address: {
+                city: "my city",
+                gali_no: 123
+            }
+        }
+
+        for ( let t in std) {
+            console.log(t) //get the keys value in obj
+
+        }
+        // for (let x of std) {
+        //     console.log(x) //get obj.html:27 Uncaught TypeError: std is not iterable at obj.html:27:23
+   
+
+        // }
+
+           let arr1 = [8, 2, 3, 4, 5];
+
+
+        for (const i in arr1) {
+            console.log(i) //get the index value in array
+
+        }
+        for (let a of arr1) {
+            console.log(a) //get the actual value in array
+
+        }
+
+ let arr2=[1,4,5,6,7,0,8]
+let a = arr2.filter((i)=>i<5)
+console.log(a)
+
+let b = arr2.filter((i)=> i%2==0)
+console.log(b)
+
+let c = arr2.filter((i)=> i%2!=0)
+console.log(c)
+
+
+let d = arr2.map((i)=> i*i )
+console.log(d)
+
+
+    </script>
+</body>
+</html>

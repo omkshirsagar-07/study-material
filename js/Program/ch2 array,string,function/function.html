@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// --! simple function  =====
+function add(a,b) 
+{
+return(a+b)
+}
+document.write("O/p of function add =",add(5,5))//function call
+
+//============= nested function======//
+
+function outer()
+{
+    document.write("<br>this is  an outer function")
+    function inner()
+    {
+        document.write("<br>This is the inner function")
+
+    }
+    inner()
+}
+
+outer()
+
+
+// =========== HOF ==============
+
+function HOF(clb){
+    clb();
+}
+    function sub(){
+        console.log("thiis  is the end")
+    }
+
+HOF(sub);
+
+
+
+function HOF2(a,b,callback){
+    callback(a,b);
+}
+    function fun(c,d){
+        console.log(c-d)
+    }
+
+HOF2(5,2,fun);
+    </script>
+</body>
+</html>

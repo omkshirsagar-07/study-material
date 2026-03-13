@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Original array
+let numbers = [1, 2, 3, 4];
+
+// map() is used to TRANSFORM each element
+// It runs the function for every element in the array
+// Whatever we return becomes part of the NEW array
+let squares = numbers.map(function (num) {
+  // num is the current element
+  // Here we are squaring each number
+  return num * num;
+});
+
+// New array with transformed values
+console.log(squares); // [1, 4, 9, 16]
+
+// Original array remains unchanged
+console.log(numbers); // [1, 2, 3, 4]
+
+    </script>
+</body>
+</html>

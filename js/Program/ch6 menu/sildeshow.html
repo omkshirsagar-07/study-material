@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="banner1.jpg" name="img" width="40%" height="50%">
+    <input type="button" value="Next" onclick="displayimg(1)">
+    <input type="button" value="Previous" onclick="displayimg(-1)">
+
+    <script>
+        var bannerarr = ["banner1.jpg", "banner2.jpg", "banner3.jpg"];
+        var bannercount = 0;
+
+        function displayimg(num) {
+
+            if (document.images) {
+                bannercount+=num;
+                if(bannercount<0){
+                    bannercount=2;
+                }
+                if(bannercount>=bannerarr.length){
+                    bannercount=0;    
+            } 
+        }
+        document.img.src=bannerarr[bannercount];
+    }
+    </script>
+</body>
+
+</html>

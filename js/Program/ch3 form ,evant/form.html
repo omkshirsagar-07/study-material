@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  name="login">
+        Enter name <input type="text" name="username" id="uid">
+        Enter email <input type="text" name="mail" id="eid">
+        <input type="button" value="Submit" onclick="fun()">
+        <br>   
+    </form>
+    <script>
+        function fun(){
+     var a= document.getElementById("uid").value;
+     var b= document.getElementById("eid").value;
+   var re =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$;/;
+   var rs=/^[A-Z][a-z]+$/;
+     if(rs.test(a)){
+        alert("name ok");
+     }
+    else{
+        alert("name not ok");
+
+    }
+  if(re.test(b)){
+    alert("email ok");
+  }
+else{
+    alert("Email is not ok")
+}
+}
+ </script>
+</body>
+</html>

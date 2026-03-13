@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <select name="ch" id="c" onchange="cc()">
+
+        <option value="rr">Select color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        function cc() {
+            var color = document.getElementById("c").value;
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+</body>
+</html>

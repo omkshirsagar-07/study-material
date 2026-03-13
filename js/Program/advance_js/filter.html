@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Original array
+let numbers = [1, 2, 3, 4, 5, 6];
+
+// filter() is used to SELECT elements based on a condition
+// If the condition returns true → element is kept
+// If false → element is removed
+let evenNumbers = numbers.filter(function (num) {
+  // Check if number is even
+  return num % 2 === 0;
+});
+
+// New array contains only elements that passed the condition
+console.log(evenNumbers); // [2, 4, 6]
+
+    </script>
+</body>
+</html>
